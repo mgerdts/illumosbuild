@@ -7,9 +7,13 @@ fi
 # Get default values for everything from this workspace
 . $ws/usr/src/tools/env/illumos.sh
 
+#
 # Common customizations across all workspaces and build types
+#
+
 export MAILTO=`git config --global --get user.email`
-export ENABLE_SMATCH=1
+# Build with Java 8 instead of Java 7
+export BLD_JAVA_8=
 
 # The script that sourced this is probably going to set NIGHTLY_OPTIONS then
 # source omni.sh.
